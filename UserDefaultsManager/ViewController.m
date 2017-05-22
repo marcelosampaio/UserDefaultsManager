@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "DataManager.h"
+#import "InstantActions.h"
 
 @interface ViewController ()
 
@@ -26,6 +27,8 @@
         NSLog(@"🤓 This is the firt login");
         [[DataManager sharedInstance] setFirstLogin];
     }
+    
+    NSLog(@"😲 action message: %@",[InstantActions messageForIndex:0]);
     
 }
 
