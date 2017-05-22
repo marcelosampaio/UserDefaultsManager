@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DataManager.h"
 
 @interface ViewController ()
 
@@ -14,15 +15,18 @@
 
 @implementation ViewController
 
+#pragma mark - View Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    // Check if this is the first time usage
+    if ([[DataManager sharedInstance] userHasAlreadyLoggedIn]) {
+        NSLog(@"🤓 - User has already logged in");
+    }else{
+        NSLog(@"🤓 This is the firt login");
+        [[DataManager sharedInstance] setFirstLogin];
+    }
+    
 }
 
 
