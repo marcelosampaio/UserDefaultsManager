@@ -11,11 +11,11 @@
 @implementation InstantActions
 
 +(NSString *)messageForIndex:(int)index{
-    if (index==0) {
+    if (index==ActionZeroDown) {
         return @"Zero Down";
-    }else if (index==1) {
+    }else if (index==ActionOneAlpha) {
         return @"One Alpha";
-    }else if (index==2) {
+    }else if (index==ActionBetaTwo) {
         return @"Beta 2";
     }else {
         return @"Index Not Defined";

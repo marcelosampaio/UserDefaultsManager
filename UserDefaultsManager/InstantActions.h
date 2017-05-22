@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, ActionId) {
+    ActionZeroDown = 0,
+    ActionOneAlpha = 1,
+    ActionBetaTwo = 5
+};
+
+
 @interface InstantActions : NSObject
 
 +(NSString *)messageForIndex:(int)index;
